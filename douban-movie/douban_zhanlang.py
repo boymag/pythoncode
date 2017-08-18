@@ -1,3 +1,4 @@
+#coding=utf-8
 import geturl,re,urllib,os
 soup=geturl.geturl('https://movie.douban.com/subject/20451290/celebrities')
 movie=soup.title.string.split(' ')[0]
