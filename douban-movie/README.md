@@ -17,4 +17,5 @@ html=requests.get(url).content
 soup=BeautifulSoup(html,'lxml')
 ```
 3. 抓取<title>标签中的片名作为文件的保存目录
-![pic2](https://github.com/boymag/pythoncode/blob/master/douban-movie/png/2.png)
+     
+     ![pic2](https://github.com/boymag/pythoncode/blob/master/douban-movie/png/2.png)
