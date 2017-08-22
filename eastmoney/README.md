@@ -18,7 +18,7 @@
 [ Python2和Python3之间关于字符串编码处理的差别](http://blog.csdn.net/yanghuan313/article/details/63262477)
 
 ## 三、实例分析
-###　页面一分析
+### 页面一分析
 1. [天天基金网](http://fund.eastmoney.com/allfund.html)这个页面所有从０至７开头的基金代码分别放在'class="num_box"对应的８个div中，其中每个li对应的就是基金所有信息，最后我们用正则表达式就可以取到我们需要的基金名称、基金代码和URL地址。
 取所有li基金信息用BeautifulSoup的select方法:
 ```select('.num_right > li')```
@@ -43,7 +43,7 @@ html=requests.get(url,headers=header).content.decode('gbk')
 #gbk编码扩展了gb2312，还支持中文繁体
 html=requests.get(url,headers=header).content.decode('utf-8')
 ```
-###　页面二分析
+### 页面二分析
 1. 从页面1传给页面２的url地址，url格式如：http://fund.eastmoney.com/000001.html 可以分析得出需要的数据放在dd 标签里。
 先用BeautifulSoup的select方法搜索到。
 再用find_all方法获取dd标签里的第二个span标签。
