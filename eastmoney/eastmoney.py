@@ -48,7 +48,6 @@ def run_detail1(code,name,url):
 
 soup=getstart.geturl_gbk(url)
 tags=soup.select('.num_right > li')
-p=Pool(2)
 for tag in tags:
 	if tag.a is None:
 		continue
@@ -64,7 +63,4 @@ for tag in tags:
 		#print (content_dict)
 		col1.insert(content_dict)
 		time.sleep(0.1)
-		p.apply_async(run_detail1(code,name,url),args=(tag,))
 		run_detail1(code,name,url)
-p.close()
-p.join()
